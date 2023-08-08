@@ -39,3 +39,4 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # make the unstructured data of json into table like data using dataframe function of pandas of python
 streamlit.dataframe(fruityvice_normalized)
 
+import snowflake.connector
