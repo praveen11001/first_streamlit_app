@@ -31,8 +31,8 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 
-# show json response of fruityvice api
-streamlit.text(fruityvice_response.json())
+# # show json response of fruityvice api
+# streamlit.text(fruityvice_response.json())
 
 # take the data into json format and normalize it 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
