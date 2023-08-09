@@ -56,7 +56,7 @@ except URLError as e:
 # make the unstructured data of json into table like data using dataframe function of pandas of python
 
 # dont run anything from here while we are facing troubleshoot
-streamlit.stop()
+# streamlit.stop()
 
 
 #snowflake connector import start works from here
