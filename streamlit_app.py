@@ -27,9 +27,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
-
-
-
 #create a repeatable code block (called function)
 def get_fruityvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
@@ -60,10 +57,6 @@ except URLError as e:
 
 
 #snowflake connector import start works from here
-
-
-
-# my_data_rows = my_cur.fetchall()
 streamlit.header("Fruit Load List Contains:")
 #snowflake-related functions
 def get_fruit_load_list():
@@ -90,6 +83,3 @@ if streamlit.button('Add a fruit to the list'):
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   back_from_function = insert_row_snowflake(add_my_fruit)
   streamlit.text(back_from_function)
-  
-# streamlit.write('Thanks for adding fruit ', add_my_fruit)
-
